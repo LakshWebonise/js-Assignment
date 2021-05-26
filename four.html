@@ -1,0 +1,27 @@
+<html>
+
+<body>
+<form id="myform">
+    <h2>Add a User:</h2>
+    <input id="username" type="text" name="username" placeholder="name">
+    <input id="email" type="email" name="email" placeholder="email">
+    <button onclick='addUser()' type="submit">add user</button>
+</form>
+
+<h2>UsersList:</h2>
+<ul id="users"></ul>
+</body>
+
+
+<script>
+    var list = document.getElementById('users');
+    function addUser(){
+        var username =document.getElementById('username').value;
+        var email = document.getElementById('email').value;
+        var entry = document.createElement('li');
+        entry.appendChild(document.createTextNode(username + '' + email));
+        list.appendChild(entry);
+    }
+</script>
+
+</html>
